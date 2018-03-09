@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1042336220525E9D00A13D6D /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1042336120525E9D00A13D6D /* test.jpg */; };
 		CD48799E20523D39004CB225 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD48799D20523D39004CB225 /* AppDelegate.m */; };
 		CD4879A120523D39004CB225 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4879A020523D39004CB225 /* ViewController.m */; };
 		CD4879A420523D39004CB225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4879A220523D39004CB225 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		CD4879AC20523D39004CB225 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4879AB20523D39004CB225 /* main.m */; };
 		CD4879B620523D39004CB225 /* AnShareTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4879B520523D39004CB225 /* AnShareTestTests.m */; };
 		CD4879C120523D39004CB225 /* AnShareTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4879C020523D39004CB225 /* AnShareTestUITests.m */; };
+		CD4879D320523D63004CB225 /* libiOS_Share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4879D120523D63004CB225 /* libiOS_Share.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1042336120525E9D00A13D6D /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		CD48799920523D39004CB225 /* AnShareTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnShareTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD48799C20523D39004CB225 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD48799D20523D39004CB225 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		CD4879BC20523D39004CB225 /* AnShareTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnShareTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4879C020523D39004CB225 /* AnShareTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnShareTestUITests.m; sourceTree = "<group>"; };
 		CD4879C220523D39004CB225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4879CF20523D63004CB225 /* iOS_Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS_Share.h; sourceTree = "<group>"; };
+		CD4879D120523D63004CB225 /* libiOS_Share.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOS_Share.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4879D320523D63004CB225 /* libiOS_Share.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,7 @@
 		CD48799B20523D39004CB225 /* AnShareTest */ = {
 			isa = PBXGroup;
 			children = (
+				CD4879CE20523D63004CB225 /* AnShare-master */,
 				CD48799C20523D39004CB225 /* AppDelegate.h */,
 				CD48799D20523D39004CB225 /* AppDelegate.m */,
 				CD48799F20523D39004CB225 /* ViewController.h */,
@@ -131,6 +138,16 @@
 			);
 			path = AnShareTestUITests;
 			sourceTree = "<group>";
+		};
+		CD4879CE20523D63004CB225 /* AnShare-master */ = {
+			isa = PBXGroup;
+			children = (
+				1042336120525E9D00A13D6D /* test.jpg */,
+				CD4879CF20523D63004CB225 /* iOS_Share.h */,
+				CD4879D120523D63004CB225 /* libiOS_Share.a */,
+			);
+			path = "AnShare-master";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -240,6 +257,7 @@
 			files = (
 				CD4879A920523D39004CB225 /* LaunchScreen.storyboard in Resources */,
 				CD4879A620523D39004CB225 /* Assets.xcassets in Resources */,
+				1042336220525E9D00A13D6D /* test.jpg in Resources */,
 				CD4879A420523D39004CB225 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,9 +449,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YN68P6M5H;
+				DEVELOPMENT_TEAM = RRFMXV75PL;
 				INFOPLIST_FILE = AnShareTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnShare-master",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = twh.AnShareTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,9 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YN68P6M5H;
+				DEVELOPMENT_TEAM = RRFMXV75PL;
 				INFOPLIST_FILE = AnShareTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AnShare-master",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = twh.AnShareTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
